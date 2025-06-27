@@ -1,0 +1,83 @@
+/* Variables y estilos globales */
+:root {
+  --color-principal: #007bff;
+  --color-fondo: #f8f9fa;
+  --color-texto: #212529;
+  --color-bg-dark: #212529;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar personalizado */
+.navbar-dark {
+  background-color: var(--color-bg-dark);
+}
+
+/* Imagen hero */
+.imagen-hero {
+  background-image: url("https://plus.unsplash.com/premium_photo-1661764393655-1dbffee8c0ce?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==");
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tarjetas con sombra y animación fade-in */
+.tarjeta {
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.3);
+}
+
+/* Formulario */
+form .form-control:invalid {
+  border-color: #dc3545;
+}
+
+form .form-control:valid {
+  border-color: #198754;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: var(--color-principal);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Acordeón: cambio temporal fondo cuando se abre */
+.accordion-body {
+  transition: background-color 0.3s ease;
+}
+
+/* Centrar textos y elementos */
+.text-center {
+  text-align: center;
+}
+
+/* Responsive para imágenes y tarjetas si añades */
+@media (max-width: 576px) {
+  .imagen-hero {
+    height: 200px;
+  }
+}
+
+.imagen-hero h1,
+.imagen-hero p {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
