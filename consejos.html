@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Consejos de Seguridad - CiberSegura</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">CiberSeguraChile</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu"
+        aria-controls="menu"
+        aria-expanded="false"
+        aria-label="Abrir menú de navegación"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="amenazas.html">Amenazas Comunes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="consejos.html">Consejos de Seguridad</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="text-center p-5 bg-success text-white">
+    <h1>Consejos para Navegar Seguro</h1>
+    <p class="lead">Aplica estas buenas prácticas para proteger tu información en línea</p>
+  </header>
+
+  <main class="container my-5">
+    <h2 class="mb-4">Buenas Prácticas</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Utiliza contraseñas seguras y únicas.</li>
+      <li class="list-group-item">Activa la verificación en dos pasos.</li>
+      <li class="list-group-item">Evita hacer clic en enlaces sospechosos.</li>
+      <li class="list-group-item">Mantén actualizado tu software y antivirus.</li>
+      <li class="list-group-item">Evita conectarte a redes Wi-Fi públicas sin protección.</li>
+    </ul>
+
+    <!-- Formulario de contacto -->
+    <section class="mt-5">
+      <h2 class="mb-4">¿Tienes dudas? Contáctanos</h2>
+      <form id="formulario-contacto" novalidate>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombre"
+            required
+            oninput="validarCampoTexto(this)"
+          />
+          <div class="invalid-feedback">Por favor ingresa tu nombre (solo letras y espacios).</div>
+        </div>
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo electrónico:</label>
+          <input type="email" class="form-control" id="correo" required />
+          <div class="invalid-feedback">Ingresa un correo válido.</div>
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje:</label>
+          <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+          <div class="invalid-feedback">Este campo no puede estar vacío.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </section>
+
+    <!-- Botón para abrir modal del test -->
+    <div class="text-center my-5">
+      <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalTest">
+        Realizar Test de Seguridad
+      </button>
+    </div>
+
+    <!-- Modal del Test -->
+    <div class="modal fade" id="modalTest" tabindex="-1" aria-labelledby="modalTestLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTestLabel">Test de Seguridad</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <form id="form-test">
+              <p><strong>1.</strong> ¿Es seguro usar la misma contraseña en varios sitios?</p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="q1f" value="f" />
+                <label class="form-check-label" for="q1f">Falso</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="q1v" value="v" />
+                <label class="form-check-label" for="q1v">Verdadero</label>
+              </div>
+
+              <p><strong>2.</strong> El phishing intenta engañar al usuario para obtener información personal.</p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q2" id="q2v" value="v" />
+                <label class="form-check-label" for="q2v">Verdadero</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q2" id="q2f" value="f" />
+                <label class="form-check-label" for="q2f">Falso</label>
+              </div>
+
+              <p><strong>3.</strong> Conectarse a Wi-Fi públicas siempre es seguro si no navegas en redes sociales.</p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q3" id="q3v" value="v" />
+                <label class="form-check-label" for="q3v">Verdadero</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q3" id="q3f" value="f" />
+                <label class="form-check-label" for="q3f">Falso</label>
+              </div>
+
+              <p><strong>4.</strong> Un antivirus actualizado ayuda a prevenir malware.</p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q4" id="q4v" value="v" />
+                <label class="form-check-label" for="q4v">Verdadero</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q4" id="q4f" value="f" />
+                <label class="form-check-label" for="q4f">Falso</label>
+              </div>
+
+              <p><strong>5.</strong> Es recomendable revisar los permisos que solicitan las apps móviles.</p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q5" id="q5v" value="v" />
+                <label class="form-check-label" for="q5v">Verdadero</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q5" id="q5f" value="f" />
+                <label class="form-check-label" for="q5f">Falso</label>
+              </div>
+
+              <p id="resultado-test" class="mt-4 fw-bold text-center"></p>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-success" id="btnEvaluar">Evaluar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center p-4 bg-dark text-light mt-5">
+    <p>&copy; 2025 CiberSeguraChile</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
